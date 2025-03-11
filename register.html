@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/images/BP3.png" alt="Logo">
+        </div>
+
+        <div class="search-bar">
+            <input type="text" name="search" placeholder="Search...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+
+        <div class="nav-icons">
+            <div class="icon">
+                <i class="fas fa-bell"></i>
+                
+            </div>
+            <div class="icon">
+                <i class="fas fa-cog"></i>
+            </div>
+            <div class="icon">
+                <img src="assets/BP3.jfif" alt="Profile" class="profile-pic">
+            </div>
+        </div>
+    </nav>
+
+    
+    <div class="register-container">
+        <div id="register-message"></div>
+        <h2>Register</h2>
+        <form action="register.php" method="POST">  
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+
+            <label>Gender:</label>
+            <div class="gender-options">
+                <label><input type="radio" name="gender" value="male" required> Male</label>
+                <label><input type="radio" name="gender" value="female" required> Female</label>
+                <label><input type="radio" name="gender" value="other" required> Other</label>
+            </div><br>
+
+            <label>Age:</label>
+            <select name="age" required>
+                <option value="" disabled selected>Select your age</option>
+                <option value="under_18">Under 18</option>
+                <option value="18-25">18-25</option>
+                <option value="26-35">26-35</option>
+                <option value="36-50">36-50</option>
+                <option value="above_50">Above 50</option>
+            </select>
+
+            <button type="submit" class="buttons">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="index.html">Login</a></p>
+    </div>
+
+    
+    <footer>
+        <p id="ender">www.BluePhenix.com</p>
+    </footer>
+
+    
+
+</body>
+<script src="index.js"></script>
+</html>
